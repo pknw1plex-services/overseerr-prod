@@ -65,7 +65,7 @@
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.TAILSCLE_SSH_SERVER }}
+          host: ${{ secrets.TAILSCALE_SSH_SERVER }}
           username:  ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
