@@ -69,4 +69,4 @@
           username:  ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: cd ${{ inputs.docker_root }}/${{ steps.repo-name.outputs.repository-name }}/config && echo $(date) > ver && git add . && git commit -m "auto" && git push
+          script: cd ${{ inputs.docker_root }}/${{ steps.repo-name.outputs.repository-name }}/config && git config --global --add safe.directory /etc/pknw1/docker/overseerr-prod/config &&  echo $(date) > ver && git add . && git commit -m "auto" && git push
